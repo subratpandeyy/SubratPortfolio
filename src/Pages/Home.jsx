@@ -12,7 +12,6 @@ import dp from '../assets/dp.JPG';
 import web from '../assets/web.jpg'
 import gallery from '../assets/gallery.jpeg'
 import poem from '../assets/poem.jpg'
-import ColorGrid from '../components/ColorGrid';
 import TechStack from '../components/TechStack';
 
 import resume from '../assets/resume.pdf';
