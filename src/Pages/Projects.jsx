@@ -3,13 +3,19 @@ import React, { useState } from 'react'
 import p_head from '../assets/p_head.png';
 import p1 from '../assets/p1.png';
 import p2 from '../assets/p2.png';
+import p12 from '../assets/p12.png';
 import p11 from '../assets/p11.png';
 import Rect1 from '../assets/Rect1.png'
 import p22 from '../assets/p22.png';
 import p_imp from '../assets/p_imp.png';
+import p21 from '../assets/p21.png';
 import Rect3 from '../assets/Rect3.png';
+import p32 from '../assets/p32.png';
+import p33 from '../assets/p33.png';
+import p3_abt from '../assets/p3_abt.png';
+import p31 from '../assets/p31.png';
 
-import botimg from '../assets/botimg.png';
+import abt_img from '../assets/abt_img.png';
 
 const btn = [ 
   { 
@@ -21,7 +27,9 @@ const btn = [
     feat_one: 'Data Visualization',
     feat_one_content: 'Trackonomy provides powerful data visualization that transforms real-time supply chain data into clear, interactive dashboards for smarter, faster decision-making.',
     feat_one_image: p1,
-    tech: ['Next.js', 'Hono', 'PostgreSQL', 'DrizzleORM', 'Clerk'],
+    feat_two: 'User Authentication',
+    feat_two_content: 'Clerk is used in Trackonomy to provide secure, seamless user authentication and account management, ensuring reliable access control across the platform.',
+    feat_two_image: p12,
    },
   { 
     label: 'GFG GIETU',
@@ -32,15 +40,22 @@ const btn = [
     feat_one: 'Domain Expertise',
     feat_one_content: 'The GFG Student Chapter GIETU website specializes in showcasing coding resources, events, and student achievements, promoting technical growth and collaboration within the developer community.',
     feat_one_image: p_imp, 
+    feat_two: 'Team Management',
+    feat_two_content: 'The GFG Student Chapter website uses a dedicated team management system to organize, display, and update chapter members efficiently, ensuring clear roles and smooth collaboration across the team.',
+    feat_two_image: p21,
   }, 
   { 
-    label: 'Trisonic',
-    image_one: '',
-    title: 'Trisonic-The Ultimate Blog Website',
-    about: '',
-    feat_one: '',
-    feat_one_content: '',
-    feat_one_image: '',
+    label: 'Dev Diary',
+    image_one: p31,
+    title: 'Dev Diary-The Ultimate Blog Website',
+    about: 'I made Dev Diary, a personal blog website, to document my development career, from taking on real-world projects to investigating new technologies and resolving challenging coding issues.  I post thorough tutorials, development advice, technical explanations, and my thoughts on the things I have learned so far in this digital journal. The platform is intended to benefit other students and developers who may be on similar routes in addition as helping me reinforce my grasp of certain concepts. It allows me to develop via regular learning, writing, and sharing.',
+    abt_img: p3_abt,
+    feat_one: 'Detailed Blogs',
+    feat_one_content: 'Dev Diary’s blogging feature allows users to create, organize, and publish technical posts with ease, making it a personal space to share and reflect on development experiences.',
+    feat_one_image: p32,
+    feat_two: 'CRUD Operations',
+    feat_two_content: 'Dev Diary supports full CRUD operations, enabling seamless creation, reading, updating, and deletion of blog posts through a user-friendly interface.',
+    feat_two_image: p33,
   } ];
 
 export default function Projects() {
@@ -61,7 +76,7 @@ export default function Projects() {
               They're a manifestation of how I prefer to learn and create things that are useful and simple.
               </p>
               </div>
-              <img src={botimg} alt='Bot Image' />
+              <img src={abt_img} alt='Bot Image' />
               
           </div>
           <div className='project-btn'>
@@ -102,16 +117,18 @@ export default function Projects() {
               <h3>{btn[selectedIndex].feat_one}</h3>
               <p>{btn[selectedIndex].feat_one_content}</p>
             </div>
-            <img src={btn[selectedIndex].feat_one_image} />
+            <img src={btn[selectedIndex].feat_one_image} className='end-img'/>
             </div>
           </div>
           
           
           <div className="end-look">
+          <img src={Rect3} alt='Back Image' className='end-back'/>
           <div className='imp-txt'>
-              <h3>Tech Stack</h3> 
+              <h3>{btn[selectedIndex].feat_two}</h3> 
+              <p>{btn[selectedIndex].feat_two_content}</p>
             </div>
-            <img src={Rect3} alt='Back Image' />
+            <img src={btn[selectedIndex].feat_two_image} className='end-img'/>
           </div>
           </div>
       </div>

@@ -5,6 +5,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaProjectDiagram } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
 import { FaPenNib } from "react-icons/fa";
+import { IoMdDownload } from "react-icons/io";
 
 
 import dp from '../assets/dp.JPG';
@@ -12,6 +13,9 @@ import web from '../assets/web.jpg'
 import gallery from '../assets/gallery.jpeg'
 import poem from '../assets/poem.jpg'
 import ColorGrid from '../components/ColorGrid';
+import TechStack from '../components/TechStack';
+
+import resume from '../assets/resume.pdf';
 
 const content = [
   {
@@ -38,6 +42,15 @@ const content = [
 ]
 
 export default function Home() {
+
+  const handleDownload = () => {
+    const a = document.createElement('a');
+    a.href = resume;
+    a.download = 'Subrat_Resume.pdf';
+    a.click();
+  };
+  
+
   return (
     <>
       <main className='container abt-section'>
@@ -46,13 +59,19 @@ export default function Home() {
         <img src={dp} alt='My Image' className='myphoto'/>
 
         <div className='abt-txt'>
-          <h1>Subrat Pandey</h1>
-          <p className='sm'>Full Stack Developer</p>
-          <p className='sm'><FaLocationDot /> Jharkhand, India</p>
-          <br/>
+            <h1>Subrat Pandey</h1>
+            <p className='sm'>Full Stack Developer</p>
+            <p className='sm'><FaLocationDot /> Jharkhand, India</p>
+            <br/>
         </div>
+          <button className='resume-btn'
+            onClick={handleDownload}
+          >
+            Resume <IoMdDownload />
+          </button>
         </div>
-        <ColorGrid />
+        {/* <ColorGrid /> */}
+        <TechStack />
         </div>
 
         <div className='content-scroll'>
