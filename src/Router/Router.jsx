@@ -6,10 +6,12 @@ import Skills from '../Pages/Skills'
 import Projects from '../Pages/Projects'
 import Gallery from '../Pages/Gallery'
 import Poem from '../Pages/Poem'
+import ScrollToTop from '../components/ScrollToTop'
 
 export default function Router() {
   return (
     <>
+    <ScrollToTop />
             <Routes>
                 <Route path='/' element={<Home />}/>
                 <Route path='/about' element={<About />}/>

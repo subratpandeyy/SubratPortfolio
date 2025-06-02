@@ -7,7 +7,7 @@ const Footer = () => {
         © {new Date().getFullYear()} Subrat Pandey. All rights reserved.
       </p>
       <div className="footer-contact">
-        <a href="mailto:12subratpandey@gmail.com" className="footer-link">12subratpandey@gmail.com</a>
+        <a href="mailto:12subratpandey@gmail.com" className="footer-link">Email</a>
       </div>
     </footer>
   );
