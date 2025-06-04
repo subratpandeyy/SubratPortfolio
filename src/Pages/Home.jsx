@@ -10,7 +10,6 @@ import { IoMdDownload } from "react-icons/io";
 import { motion } from "framer-motion";
 
 
-import dp from '../assets/dp.JPG';
 import dp1 from '../assets/dp1.png';
 import web from '../assets/web.jpg'
 import gallery from '../assets/gallery.jpeg'

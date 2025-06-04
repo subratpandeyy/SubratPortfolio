@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaLaptopCode, FaUserGraduate, FaRegSmile, FaBullseye } from "react-icons/fa";
 
-import dp from '../assets/dp.jpg';
+import dp from '../assets/dp.JPG';
 
 const Card = ({ children, className }) => (
   <div className={`custom-card ${className || ""}`}>
