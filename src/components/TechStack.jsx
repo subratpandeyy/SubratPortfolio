@@ -1,14 +1,16 @@
 import React from 'react';
+import RGBCard from './RGBCard';
 
 const TechStack = () => {
   const skills = [
     'JavaScript', 'React', 'Node.js',
     'Express.js', 'MongoDB', 'Git', 'GitHub',
-    'Tailwind CSS', 'MySQL',
+    'Tailwind CSS','Motion', 'MySQL',
     'Python', 'Flask',
   ];
 
   return (
+    <RGBCard>
     <section className="techstack-section">
       <h2 className="techstack-heading">Technologies I Work With</h2>
       <div className="skills-grid">
@@ -19,6 +21,7 @@ const TechStack = () => {
         ))}
       </div>
     </section>
+    </RGBCard>
   );
 };
 

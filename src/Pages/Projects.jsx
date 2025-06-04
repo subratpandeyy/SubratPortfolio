@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { motion } from "framer-motion";
+
 
 import p_head from '../assets/p_head.png';
 import p1 from '../assets/p1.png';
@@ -18,6 +20,19 @@ import p31 from '../assets/p31.png';
 import abt_img from '../assets/abt_img.png';
 
 const btn = [ 
+  { 
+    label: 'Dev Diary',
+    image_one: p31,
+    title: 'Dev Diary-The Ultimate Blog Website',
+    about: 'I made Dev Diary, a personal blog website, to document my development career, from taking on real-world projects to investigating new technologies and resolving challenging coding issues.  I post thorough tutorials, development advice, technical explanations, and my thoughts on the things I have learned so far in this digital journal. The platform is intended to benefit other students and developers who may be on similar routes in addition as helping me reinforce my grasp of certain concepts. It allows me to develop via regular learning, writing, and sharing.',
+    abt_img: p3_abt,
+    feat_one: 'Detailed Blogs',
+    feat_one_content: 'Dev Diary’s blogging feature allows users to create, organize, and publish technical posts with ease, making it a personal space to share and reflect on development experiences.',
+    feat_one_image: p32,
+    feat_two: 'CRUD Operations',
+    feat_two_content: 'Dev Diary supports full CRUD operations, enabling seamless creation, reading, updating, and deletion of blog posts through a user-friendly interface.',
+    feat_two_image: p33,
+  } ,
   { 
     label: 'Trackonomy',
     image_one: p_head,
@@ -44,19 +59,9 @@ const btn = [
     feat_two_content: 'The GFG Student Chapter website uses a dedicated team management system to organize, display, and update chapter members efficiently, ensuring clear roles and smooth collaboration across the team.',
     feat_two_image: p21,
   }, 
-  { 
-    label: 'Dev Diary',
-    image_one: p31,
-    title: 'Dev Diary-The Ultimate Blog Website',
-    about: 'I made Dev Diary, a personal blog website, to document my development career, from taking on real-world projects to investigating new technologies and resolving challenging coding issues.  I post thorough tutorials, development advice, technical explanations, and my thoughts on the things I have learned so far in this digital journal. The platform is intended to benefit other students and developers who may be on similar routes in addition as helping me reinforce my grasp of certain concepts. It allows me to develop via regular learning, writing, and sharing.',
-    abt_img: p3_abt,
-    feat_one: 'Detailed Blogs',
-    feat_one_content: 'Dev Diary’s blogging feature allows users to create, organize, and publish technical posts with ease, making it a personal space to share and reflect on development experiences.',
-    feat_one_image: p32,
-    feat_two: 'CRUD Operations',
-    feat_two_content: 'Dev Diary supports full CRUD operations, enabling seamless creation, reading, updating, and deletion of blog posts through a user-friendly interface.',
-    feat_two_image: p33,
-  } ];
+  
+];
+
 
 export default function Projects() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -64,8 +69,14 @@ export default function Projects() {
   return (
     <>
       <div className='container project-section'>
+
         <div className='project-abt'>
           <div className="abt-row">
+          <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           <div className='project-txt'>
             <h2>Web Projects</h2>
             <p>I like to develop web projects with the MERN stack because it allows me to work on the frontend 
@@ -76,9 +87,20 @@ export default function Projects() {
               They're a manifestation of how I prefer to learn and create things that are useful and simple.
               </p>
               </div>
+          </motion.div>
+          <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
               <img src={abt_img} alt='Bot Image' />
-              
+              </motion.div>
           </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+          >
           <div className='project-btn'>
             {
               btn.map(({label, image_one, title, about, abt_img, feat_one, feat_one_content, feat_one_image,}, index) => (
@@ -91,27 +113,60 @@ export default function Projects() {
               ))
             }
           </div>
+          </motion.div>
         </div>
         <div className="project-display">
+          <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
           <div className="project-image">
             <img src={btn[selectedIndex].image_one} alt='Image' />
           </div>
+          </motion.div>
 
           <div className='project-use'>
+            
             <div className='left-port'>
+            <motion.div
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
               <div className="inner-port">
                 <img src={btn[selectedIndex].abt_img} alt='Mobile Responsive' />
               </div>
+              </motion.div>
             </div>
+
+            <motion.div
+              className="about-intro"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
             <div className="use-case">
               <h3>{btn[selectedIndex].title}</h3>
               <p>{btn[selectedIndex].about}</p>
             </div>
+            </motion.div>
           </div>
 
-
           <div className="project-imp">
+          <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
             <img src={Rect1} className='imp-back' />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
             <div className="imp">
             <div className='imp-txt'>
               <h3>{btn[selectedIndex].feat_one}</h3>
@@ -119,9 +174,14 @@ export default function Projects() {
             </div>
             <img src={btn[selectedIndex].feat_one_image} className='end-img'/>
             </div>
+            </motion.div>
           </div>
           
-          
+          <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
           <div className="end-look">
           <img src={Rect3} alt='Back Image' className='end-back'/>
           <div className='imp-txt'>
@@ -130,7 +190,9 @@ export default function Projects() {
             </div>
             <img src={btn[selectedIndex].feat_two_image} className='end-img'/>
           </div>
+          </motion.div>
           </div>
+          
       </div>
     </>
   )

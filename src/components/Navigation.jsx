@@ -5,13 +5,15 @@ import { RiMessage3Fill } from "react-icons/ri";
 import { SiHyperskill } from "react-icons/si";
 import { FaProjectDiagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { MdOutlineAttachEmail } from "react-icons/md";
+
 
 export default function Navigation() {
   const location = useLocation();
 
   const navLinks = [
     { path: '/', icon: <AiFillHome />, label: 'Home' },
-    { path: '/about', icon: <RiMessage3Fill />, label: 'Contact' },
+    { path: '/about', icon: <RiMessage3Fill />, label: 'About' },
     { path: '/skills', icon: <SiHyperskill />, label: 'Skills' },
     { path: '/projects', icon: <FaProjectDiagram />, label: 'Projects' },
   ];
@@ -20,9 +22,11 @@ export default function Navigation() {
     { href: 'https://github.com/', icon: <FaGithub />, label: 'GitHub' },
     { href: 'https://linkedin.com', icon: <FaLinkedin />, label: 'LinkedIn' },
     { href: 'https://twitter.com', icon: <FaXTwitter />, label: 'Twitter' },
+    { href: 'mailto:12subratpandey@gmail.com', icon: <MdOutlineAttachEmail />, label: 'Email' },
   ];
 
   return (
+    <>
     <div className="container header">
       <nav>
         <ul className="nav-list">
@@ -60,5 +64,6 @@ export default function Navigation() {
         </ul>
       </nav>
     </div>
+    </>
   );
 }

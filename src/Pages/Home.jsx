@@ -1,14 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-import { FaLocationDot } from "react-icons/fa6";
+import { TbLocation } from "react-icons/tb";
 import { FaProjectDiagram } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
 import { FaPenNib } from "react-icons/fa";
 import { IoMdDownload } from "react-icons/io";
 
+import { motion } from "framer-motion";
+
 
 import dp from '../assets/dp.JPG';
+import dp1 from '../assets/dp1.png';
 import web from '../assets/web.jpg'
 import gallery from '../assets/gallery.jpeg'
 import poem from '../assets/poem.jpg'
@@ -55,27 +58,55 @@ export default function Home() {
       <main className='container abt-section'>
         <div className='hero-section'>
         <div className='hero'>
-        <img src={dp} alt='My Image' className='myphoto'/>
-
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
+        <img src={dp1} alt='My Image' className='myphoto'/>
+        </motion.div>
+        <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         <div className='abt-txt'>
             <h1>Subrat Pandey</h1>
             <p className='sm'>Full Stack Developer</p>
-            <p className='sm'><FaLocationDot /> Jharkhand, India</p>
+            <p className='sm'><TbLocation className='loc-icon'/>Jharkhand, India </p>
             <br/>
-        </div>
+            <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
           <button className='resume-btn'
             onClick={handleDownload}
           >
             Resume <IoMdDownload />
           </button>
+          </motion.div>
         </div>
-        {/* <ColorGrid /> */}
+        </motion.h1>
+        
+        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
         <TechStack />
+        </motion.div>
         </div>
 
         <div className='content-scroll'>
         {content.map(({ image, icon, link, head, txt }, index) => (
           <Link to={link} key={index}>
+            <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4, duration: 0.6 }}
+      >
           <div className='windows'>
             <div className='cont-image'>
               <img src={image} alt='Image' />
@@ -88,6 +119,7 @@ export default function Home() {
               <p className='txt-m'>{txt}</p>
             </div>
           </div>
+          </motion.div>
           </Link>
         )
         )}

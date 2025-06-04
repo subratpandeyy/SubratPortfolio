@@ -105,11 +105,11 @@ hr {
 }
 .hero {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   min-width: 300px;
-  gap: 10px;
+  gap: 20px;
 }
 .abt-txt {
   display: flex;
@@ -118,7 +118,7 @@ hr {
 .resume-btn {
   display: flex;
   padding: 10px 20px;
-  border-radius: 40px;
+  border-radius: 15px;
   background: linear-gradient(rgba(69, 69, 71, 0.3), #15161A);
   border: 1px solid rgba(69, 69, 71, 0.3);
   color: #ccc;
@@ -126,7 +126,9 @@ hr {
   align-items: center;
   gap: 5px;
   transition: 0.3s ease;
-  box-shadow: 0px 2px 4px 2px #070807;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+
+  /* box-shadow: 0px 2px 4px 2px #070807; */
 
 }
 .resume-btn:hover{
@@ -141,10 +143,14 @@ hr {
   font-weight: 500;
 }
 .sm {
-  justify-content: center;
   color: #4B5563;
   font-size: 13px;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.loc-icon {
+  padding-right: 2px;
 }
 .myphoto {
   height: 150px;
@@ -206,6 +212,7 @@ a {
     0 20px 30px -10px rgba(0, 0, 0, 0.5),
     0 0 0 1px rgba(255, 255, 255, 0.05) inset;
 }
+
 .cont-txt {
   padding: 5px;
   display: flex;
@@ -240,6 +247,101 @@ p.txt-m {
   width: auto;
   height: 100%;
 }
+
+
+/* About */
+
+.about-container {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.about-subtitle {
+  color: #ccc;
+}
+
+.about-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+.about-icon {
+  color: #ccc;
+}
+
+.about-grid {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3,1fr);
+}
+.about-card {
+  height: 200px;
+  width: auto;
+  background: linear-gradient(rgba(69, 69, 71, 0.3), #15161A);
+  border: 1px solid rgba(69, 69, 71, 0.3);
+  border-bottom: none;
+}
+.about-mission {
+  border: 1px solid rgba(69, 69, 71, 0.3);
+  background: linear-gradient(rgba(69, 69, 71, 0.3), #15161A);
+  border-radius: 15px;
+  border-bottom: none;
+}
+.enhanced-mission .about-mission-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.about-intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+.about-photo {
+  height: 200px;
+  width: auto;
+  border-radius: 50%;
+  border: 1px solid rgba(69, 69, 71, 0.8);
+}
+.about-intro-text {
+  max-width: 500px;
+}
+.about-intro-text h2 {
+  padding-bottom: 4px;
+  color: #ccc;
+}
+.about-intro-text p {
+  color: #4B5563;
+}
+
+/* Card */
+.custom-card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.custom-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.custom-card-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+
 
 /* grid */
 
@@ -335,11 +437,11 @@ button.individual-btn {
   padding: 10px 20px;
   background: linear-gradient(rgba(69, 69, 71, 0.3), #15161A);
   border: 1px solid rgba(69, 69, 71, 0.3);
-  border-radius: 40px;
+  border-radius: 15px;
   color: #ccc;
   font-weight: 600;
   align-items: center;
-  box-shadow: 0px 2px 4px 2px #070807;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
   transition: 0.3s ease;
 
 }
@@ -504,6 +606,9 @@ button.individual-btn {
   padding: 20px;
   text-align: center;
   background: transparent;
+  /* border: 1px solid #3B82F6; */
+  border-radius: 15px;
+  max-width: 400px;
 }
 
 .techstack-heading {
@@ -524,7 +629,7 @@ button.individual-btn {
 
 .skill-badge {
   padding: 0.6rem 1rem;
-  background: linear-gradient(to right,rgba(69, 69, 71, 0.3), #15161A);
+  background-color: rgba(69, 69, 71, 0.3);
   border: 1px solid rgba(69, 69, 71, 0.3);
   color: #ccc;
   border-radius: 9999px;
@@ -532,6 +637,7 @@ button.individual-btn {
   font-weight: 500;
   transition: 0.3s;
   cursor: default;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
 .skill-badge:hover {
@@ -581,6 +687,10 @@ button.individual-btn {
     width: 100%;
   }
 
+  .techstack-section {
+    max-width: 200px;
+  }
+
   /* projects */
   .abt-row {
     flex-direction: column;
@@ -620,7 +730,68 @@ button.individual-btn {
     width: 700px;
     margin-left: 0;
   }
+
+  .hero {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* about section */
+
+  .about-container {
+    margin-top: 50px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
 }
+
+.about-card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-card-content {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.about-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.about-text {
+  color: #4b5563;
+}
+
+.about-mission {
+  margin-top: 3rem;
+  text-align: center;
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-mission-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+
 
 @media(max-width: 435px) {
   .container {
@@ -631,10 +802,10 @@ button.individual-btn {
   .abt-section {
     margin-top: 100px;
   }
-  .hero {
-    justify-content: center;
-    align-items: center;
+  button.resume-btn {
+    margin: 0 auto;
   }
+  
   p.sm {
     text-align: center;
   }
