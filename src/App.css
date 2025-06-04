@@ -739,6 +739,9 @@ button.individual-btn {
 
   /* about section */
 
+  .about-intro {
+    flex-direction: column;
+  }
   .about-container {
     margin-top: 50px;
   }
