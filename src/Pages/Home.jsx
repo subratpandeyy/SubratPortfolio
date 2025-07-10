@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-import { TbLocation } from "react-icons/tb";
 import { FaProjectDiagram } from "react-icons/fa";
 import { GrGallery } from "react-icons/gr";
 import { FaPenNib } from "react-icons/fa";
@@ -10,7 +9,7 @@ import { IoMdDownload } from "react-icons/io";
 import { motion } from "framer-motion";
 
 
-import dp1 from '../assets/dp1.png';
+import dp1 from '../assets/dp1.jpg';
 import web from '../assets/web.jpg'
 import gallery from '../assets/gallery.jpeg'
 import poem from '../assets/poem.jpg'
@@ -72,7 +71,7 @@ export default function Home() {
         <div className='abt-txt'>
             <h1>Subrat Pandey</h1>
             <p className='sm'>Full Stack Developer</p>
-            <p className='sm'><TbLocation className='loc-icon'/>Jharkhand, India </p>
+            <p className='sm'>Jharkhand, India </p>
             <br/>
             <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -94,7 +93,7 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
-        <TechStack />
+        {/* <TechStack /> */}
         </motion.div>
         </div>
 

@@ -154,13 +154,13 @@ export default function Projects() {
           </div>
 
           <div className="project-imp">
-          <motion.div
+          {/* <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
             <img src={Rect1} className='imp-back' />
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -183,7 +183,7 @@ export default function Projects() {
               transition={{ delay: 0.3, duration: 0.5 }}
             >
           <div className="end-look">
-          <img src={Rect3} alt='Back Image' className='end-back'/>
+          {/* <img src={Rect3} alt='Back Image' className='end-back'/> */}
           <div className='imp-txt'>
               <h3>{btn[selectedIndex].feat_two}</h3> 
               <p>{btn[selectedIndex].feat_two_content}</p>

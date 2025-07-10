@@ -1,12 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Baskervville+SC&family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Baskervville+SC&family=Bitcount+Grid+Double:wght@100..900&family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #15161A;
-  font-family: "Open Sans", sans-serif;
+  /* background-color: #141b24; */
+  /* background-color: #15161A; */
+  font-family: "PT Sans", sans-serif;
+  background: linear-gradient(135deg, #141b24, #000);
 }
 
 .container {
@@ -88,16 +91,16 @@ hr {
   border: 0 !important;
 }
 
+
 /* Home */
 .abt-section {
-  margin: 40px 40px 0 40px;
+  margin: 40px auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 .hero-section {
-  margin: 0 0 0 200px;
-  gap: 50px;
+  margin: 50px 0 0 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -119,7 +122,7 @@ hr {
   display: flex;
   padding: 10px 20px;
   border-radius: 15px;
-  background: linear-gradient(rgba(69, 69, 71, 0.3), #15161A);
+  background: linear-gradient(rgba(69, 69, 71, 0.3), #141b24);
   border: 1px solid rgba(69, 69, 71, 0.3);
   color: #ccc;
   font-weight: 600;
@@ -137,14 +140,14 @@ hr {
 }
 .abt-txt h1 {
   color: #ccc;
-  font-family: "Anton", serif;
+  font-family: "Bitcount Grid Double", system-ui;
   letter-spacing: 1.5px;
   font-size: 40px;
   font-weight: 500;
 }
 .sm {
   color: #4B5563;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -153,9 +156,9 @@ hr {
   padding-right: 2px;
 }
 .myphoto {
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  border-radius: 40px;
   border: 1px solid #ccc;
 
 }
@@ -184,6 +187,58 @@ hr {
   }
 }
 
+/* Blogs */
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 80px 40px 200px;
+}
+.article-ul {
+  list-style-type: none;
+  font-size: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.article-list-date {
+  font-size: 1rem;
+  color: gray;
+  width: 100px;
+  display: inline-block;
+  width: 260px;
+}
+
+.article-ul li a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-decoration: none;
+  margin: 18px 0;
+  color: #ccc;
+  gap: 10px;
+}
+.article-ul li {
+  font-size: 24px;
+  cursor: pointer;
+  transition: filter 0.3s;
+  /* background: linear-gradient(to right,rgba(69, 69, 71, 0.3), #15161A); */
+}
+
+.article-ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(69, 69, 71, 0.3);
+}
+
+.article-ul li:hover {
+  filter: none;
+}
+
+.article-ul:hover li {
+  filter: blur(3px);
+}
+
+.article-ul:hover li:hover {
+  filter: none;
+}
 
 /* content */
 
@@ -192,7 +247,7 @@ hr {
   flex-direction: row;
   gap: 20px;
   /* width: 1200px; */
-  margin: 40px 40px 40px 200px;
+  margin: 40px 40px 40px 50px;
 }
 
 a {
@@ -206,7 +261,8 @@ a {
   width: 356px;
   justify-content: center;
   padding: 3px;
-  background: linear-gradient(rgba(69, 69, 71, 0.3), #15161A);
+  /* background-color: #141b24; */
+  background: linear-gradient(#141b24, rgba(69, 69, 71, 0.1));
   border-radius: 15px;
   box-shadow:
     0 20px 30px -10px rgba(0, 0, 0, 0.5),
@@ -214,7 +270,7 @@ a {
 }
 
 .cont-txt {
-  padding: 5px;
+  padding: 5px 0 10px 5px;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -689,6 +745,17 @@ button.individual-btn {
 
   .techstack-section {
     max-width: 200px;
+  }
+
+  /* Blogs */
+
+  .article-ul li a {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .article-list-date {
+    text-align: right;
   }
 
   /* projects */

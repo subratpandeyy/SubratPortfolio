@@ -14,7 +14,7 @@ export default function Navigation() {
   const navLinks = [
     { path: '/', icon: <AiFillHome />, label: 'Home' },
     { path: '/about', icon: <RiMessage3Fill />, label: 'About' },
-    { path: '/skills', icon: <SiHyperskill />, label: 'Skills' },
+    { path: '/blog', icon: <SiHyperskill />, label: 'Blog' },
     { path: '/projects', icon: <FaProjectDiagram />, label: 'Projects' },
   ];
 
@@ -27,7 +27,7 @@ export default function Navigation() {
 
   return (
     <>
-    <div className="container header">
+    <div className="container header glass">
       <nav>
         <ul className="nav-list">
           {navLinks.map(({ path, icon, label }) => (
