@@ -17,11 +17,12 @@ const Blog = () => {
 
   return (
     <div className="blog-container">
+      <h2>My Articles</h2>
       <ul className='article-ul'>
         {posts.map(post => (
           <li key={post._id}>
             <a href={`/blog/${post._id}`}>{post.title}</a>
-            <p>{new Date(post.createdAt).toDateString()}</p>
+            <p className='article-list-date'>{new Date(post.createdAt).toDateString()}</p>
           </li>
         ))}
       </ul>

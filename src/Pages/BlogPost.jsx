@@ -15,7 +15,7 @@ const BlogPost = () => {
   if (!post) return <p>Loading...</p>;
 
   return (
-    <article>
+    <article className='blogbody'>
       <h1>{post.title}</h1>
       <p>{new Date(post.createdAt).toDateString()}</p>
       <div>{post.body}</div>
