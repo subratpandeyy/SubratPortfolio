@@ -69,7 +69,7 @@ export default function Home() {
         transition={{ duration: 0.6 }}
       >
         <div className='abt-txt'>
-            <h1>Subrat Pandey</h1>
+            <h1>SUBRAT PANDEY</h1>
             <p className='sm'>Full Stack Developer</p>
             <p className='sm'>Jharkhand, India </p>
             <br/>

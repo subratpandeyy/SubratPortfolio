@@ -8,6 +8,9 @@ import Gallery from '../Pages/Gallery'
 import Poem from '../Pages/Poem'
 import ScrollToTop from '../components/ScrollToTop'
 import BlogPost from '../Pages/BlogPost'
+import PostForm from '../Pages/PostForm'
+import BlogForm from '../components/BlogForm'
+import PoemForm from '../components/PoemForm'
 
 export default function Router() {
   return (
@@ -21,6 +24,9 @@ export default function Router() {
                 <Route path='/projects' element={<Projects />}/>
                 <Route path='/gallery' element={<Gallery />} />
                 <Route path='/poem' element={<Poem />} />
+                <Route path='/blogform' element={<BlogForm />} />
+                <Route path='/postform' element={<PostForm />} />
+                <Route path='/poemform' element={<PoemForm />} />
             </Routes>
     </>
   )
