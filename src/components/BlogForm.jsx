@@ -11,7 +11,7 @@ const BlogForm = ({ onBlogCreated }) => {
     if (!file) return "";
     const formData = new FormData();
     formData.append("file", file);
-    const res = await axios.post("http://localhost:8090/api/images/upload", formData, {
+    const res = await axios.post("https://subratportfolio.onrender.com/api/images/upload", formData, {
       headers: { "Content-Type": "multipart/form-data" },
     });
     return res.data.imageUrl;
@@ -24,7 +24,7 @@ const BlogForm = ({ onBlogCreated }) => {
     try {
       const imageUrl = await handleImageUpload();
       const blogData = { title, content, imageUrl };
-      const res = await axios.post("http://localhost:8090/api/blogs", blogData);
+      const res = await axios.post("https://subratportfolio.onrender.com/api/blogs", blogData);
       onBlogCreated(res.data);
       setTitle("");
       setContent("");

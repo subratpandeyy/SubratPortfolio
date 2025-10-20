@@ -486,7 +486,7 @@ p.txt-m {
 .blog-card h2 {
   font-family: "Dancing Script", cursive;
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 40px;
   margin-bottom: 15px;
   color: #ccc;
   position: relative;
@@ -510,7 +510,7 @@ p.txt-m {
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 1.8;
   color: #ccc;
   white-space: pre-line;

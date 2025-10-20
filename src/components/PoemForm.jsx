@@ -12,7 +12,7 @@ const PoemForm = ({ onPoemCreated }) => {
 
     try {
       const poemData = { title, content };
-      const res = await axios.post("http://localhost:8090/api/poems", poemData);
+      const res = await axios.post("https://subratportfolio.onrender.com/api/poems", poemData);
       onPoemCreated(res.data);
       setTitle("");
       setContent("");

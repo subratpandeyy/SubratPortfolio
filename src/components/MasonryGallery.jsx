@@ -15,7 +15,7 @@ export default function MasonryGallery() {
 
   useEffect(() => {
     // Replace with your backend URL
-    axios.get('http://localhost:8090/api/blogs')
+    axios.get('https://subratportfolio.onrender.com/api/blogs')
       .then(res => setData(res.data))
       .catch(err => console.error("Error fetching data:", err));
   }, []);

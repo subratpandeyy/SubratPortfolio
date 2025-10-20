@@ -8,7 +8,7 @@ const PoemList = () => {
 
   const fetchPoems = async () => {
     try {
-      const res = await axios.get("http://localhost:8090/api/poems");
+      const res = await axios.get("https://subratportfolio.onrender.com/api/poems");
       setPoems(res.data);
     } catch (err) {
       console.error(err);
