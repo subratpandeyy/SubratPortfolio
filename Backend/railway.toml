@@ -1,0 +1,17 @@
+[build]
+builder = "RIX_STD"
+
+[deploy]
+numReplicas = 1
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+[[services]]
+name = "spring-boot-app"
+
+[services.env]
+SPRING_PROFILES_ACTIVE = "prod"
+
+[[services.ports]]
+port = 8080
+http = "/"
