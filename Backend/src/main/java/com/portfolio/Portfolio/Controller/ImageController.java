@@ -10,7 +10,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/images")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://subratpandey.vercel.app/")
 public class ImageController {
 
     @Autowired
