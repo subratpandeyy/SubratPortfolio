@@ -14,7 +14,7 @@ export default function Navigation() {
   const navLinks = [
     { path: '/', icon: <AiFillHome />, label: 'Home' },
     // { path: '/about', icon: <RiMessage3Fill />, label: 'About' },
-    { path: '/blog', icon: <SiHyperskill />, label: 'Blog' },
+    // { path: '/blog', icon: <SiHyperskill />, label: 'Blog' },
     { path: '/projects', icon: <FaProjectDiagram />, label: 'Projects' },
   ];
 

@@ -78,7 +78,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
         >
           <div className='project-txt'>
-            <h2>Web Projects</h2>
+            <h2>My Projects</h2>
             <p>I like to develop web projects with the MERN stack because it allows me to work on the frontend 
               and the backend simultaneously in a holistic manner. With React, I concentrate on making interfaces 
               simple to use, while on the backend I employ Node.js, Express, and MongoDB to manage everything 
