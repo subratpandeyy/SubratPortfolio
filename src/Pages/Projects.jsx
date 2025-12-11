@@ -16,10 +16,29 @@ import p32 from '../assets/p32.png';
 import p33 from '../assets/p33.png';
 import p3_abt from '../assets/p3_abt.png';
 import p31 from '../assets/p31.png';
+import crm1 from '../assets/crm1.png';
+import crm2 from '../assets/crm2.png';
+import crm3 from '../assets/crm3.png';
+import crmvert from '../assets/crmvert.png';
 
 import abt_img from '../assets/abt_img.png';
 
 const btn = [ 
+  {
+    label: 'CRM Platform',
+    image_one: crm1,
+    title: 'CRM Platform – Smart Customer & Business Management',
+    about: 'I built this CRM Platform to simplify how businesses manage customers, leads, and daily operations. Designed using React.js, Spring Boot, PostgreSQL, and Hibernate, this system delivers seamless performance with a secure and scalable architecture. It handles real-time customer tracking, lead management, deal pipelines, role-based access, and powerful automation. The goal was to create a professional-grade CRM that feels lightweight, fast, and reliable for small organizations and growing teams. Every feature is crafted to make business management smoother, smarter, and more efficient.',
+    abt_img: crmvert,
+  
+    feat_one: 'Lead & Deal Management',
+    feat_one_content: 'The CRM provides a streamlined interface to add, update, track, and convert leads into deals. Users can monitor deal stages, assign priority, and manage every customer interaction in an organized way.',
+    feat_one_image: crm2,
+  
+    feat_two: 'Complete CRUD System',
+    feat_two_content: 'The platform includes full CRUD operations for customers, leads, deals, users, and roles. Thanks to React’s fast UI updates and Spring Boot’s robust REST APIs, data stays consistent, secure, and instantly accessible.',
+    feat_two_image: crm3
+  },  
   { 
     label: 'Dev Diary',
     image_one: p31,
