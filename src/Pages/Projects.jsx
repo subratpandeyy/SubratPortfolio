@@ -1,0 +1,218 @@
+import React, { useState } from 'react'
+import { motion } from "framer-motion";
+
+
+import p_head from '../assets/p_head.png';
+import p1 from '../assets/p1.png';
+import p2 from '../assets/p2.png';
+import p12 from '../assets/p12.png';
+import p11 from '../assets/p11.png';
+import Rect1 from '../assets/Rect1.png'
+import p22 from '../assets/p22.png';
+import p_imp from '../assets/p_imp.png';
+import p21 from '../assets/p21.png';
+import Rect3 from '../assets/Rect3.png';
+import p32 from '../assets/p32.png';
+import p33 from '../assets/p33.png';
+import p3_abt from '../assets/p3_abt.png';
+import p31 from '../assets/p31.png';
+import crm1 from '../assets/crm1.png';
+import crm2 from '../assets/crm2.png';
+import crm3 from '../assets/crm3.png';
+import crmvert from '../assets/crmvert.png';
+
+import abt_img from '../assets/abt_img.png';
+
+const btn = [ 
+  {
+    label: 'CRM Platform',
+    image_one: crm1,
+    title: 'CRM Platform – Smart Customer & Business Management',
+    about: 'I built this CRM Platform to simplify how businesses manage customers, leads, and daily operations. Designed using React.js, Spring Boot, PostgreSQL, and Hibernate, this system delivers seamless performance with a secure and scalable architecture. It handles real-time customer tracking, lead management, deal pipelines, role-based access, and powerful automation. The goal was to create a professional-grade CRM that feels lightweight, fast, and reliable for small organizations and growing teams. Every feature is crafted to make business management smoother, smarter, and more efficient.',
+    abt_img: crmvert,
+  
+    feat_one: 'Lead & Deal Management',
+    feat_one_content: 'The CRM provides a streamlined interface to add, update, track, and convert leads into deals. Users can monitor deal stages, assign priority, and manage every customer interaction in an organized way.',
+    feat_one_image: crm2,
+  
+    feat_two: 'Complete CRUD System',
+    feat_two_content: 'The platform includes full CRUD operations for customers, leads, deals, users, and roles. Thanks to React’s fast UI updates and Spring Boot’s robust REST APIs, data stays consistent, secure, and instantly accessible.',
+    feat_two_image: crm3
+  },  
+  { 
+    label: 'Dev Diary',
+    image_one: p31,
+    title: 'Dev Diary-The Ultimate Blog Website',
+    about: 'I made Dev Diary, a personal blog website, to document my development career, from taking on real-world projects to investigating new technologies and resolving challenging coding issues.  I post thorough tutorials, development advice, technical explanations, and my thoughts on the things I have learned so far in this digital journal. The platform is intended to benefit other students and developers who may be on similar routes in addition as helping me reinforce my grasp of certain concepts. It allows me to develop via regular learning, writing, and sharing.',
+    abt_img: p3_abt,
+    feat_one: 'Detailed Blogs',
+    feat_one_content: 'Dev Diary’s blogging feature allows users to create, organize, and publish technical posts with ease, making it a personal space to share and reflect on development experiences.',
+    feat_one_image: p32,
+    feat_two: 'CRUD Operations',
+    feat_two_content: 'Dev Diary supports full CRUD operations, enabling seamless creation, reading, updating, and deletion of blog posts through a user-friendly interface.',
+    feat_two_image: p33,
+  } ,
+  { 
+    label: 'Trackonomy',
+    image_one: p_head,
+    title: 'Trackonomy-Your Personal Finance Manager',
+    about: 'Trackonomy solves the problem of limited visibility and inefficiency in global supply chains by providing real-time tracking and monitoring solutions. This helps prevent delays, losses, and damage, while also improving operational efficiency and decision-making. By offering end-to-end visibility and seamless integration with existing systems, Trackonomy makes supply chains smarter, faster, and more reliable.',
+    abt_img: p11,
+    feat_one: 'Data Visualization',
+    feat_one_content: 'Trackonomy provides powerful data visualization that transforms real-time supply chain data into clear, interactive dashboards for smarter, faster decision-making.',
+    feat_one_image: p1,
+    feat_two: 'User Authentication',
+    feat_two_content: 'Clerk is used in Trackonomy to provide secure, seamless user authentication and account management, ensuring reliable access control across the platform.',
+    feat_two_image: p12,
+   },
+  { 
+    label: 'GFG GIETU',
+    image_one: p2,
+    title: 'GeeksForGeeks Student Chapter GIETU',
+    about: 'The GIETU team of GFG Student Chapter comprises students interested in coding and technology. They organize and conduct events such as coding challenges, workshops, and study sessions to enable others to learn. Each of them plays different roles, like event organizing, material designing, or assisting in communication. They collaborate as a team to enable learning about programming for everyone on campus.',
+    abt_img: p22,
+    feat_one: 'Domain Expertise',
+    feat_one_content: 'The GFG Student Chapter GIETU website specializes in showcasing coding resources, events, and student achievements, promoting technical growth and collaboration within the developer community.',
+    feat_one_image: p_imp, 
+    feat_two: 'Team Management',
+    feat_two_content: 'The GFG Student Chapter website uses a dedicated team management system to organize, display, and update chapter members efficiently, ensuring clear roles and smooth collaboration across the team.',
+    feat_two_image: p21,
+  }, 
+  
+];
+
+
+export default function Projects() {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  return (
+    <>
+      <div className='container project-section'>
+
+        <div className='project-abt'>
+          <div className="abt-row">
+          <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className='project-txt'>
+            <h2>My Projects</h2>
+            <p>I like to develop web projects with the MERN stack because it allows me to work on the frontend 
+              and the backend simultaneously in a holistic manner. With React, I concentrate on making interfaces 
+              simple to use, while on the backend I employ Node.js, Express, and MongoDB to manage everything 
+              from data to user actions. </p><p>I've done things such as dashboards, forms, and little tools—each of 
+              them making me better at solving problems and making the web nicer to use for others. 
+              They're a manifestation of how I prefer to learn and create things that are useful and simple.
+              </p>
+              </div>
+          </motion.div>
+          <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              <img src={abt_img} alt='Bot Image' />
+              </motion.div>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+          >
+          <div className='project-btn'>
+            {
+              btn.map(({label, image_one, title, about, abt_img, feat_one, feat_one_content, feat_one_image,}, index) => (
+                <button key={index} 
+                className='individual-btn'
+                onClick={() => setSelectedIndex(index)}
+                >
+                  {label}
+                </button>
+              ))
+            }
+          </div>
+          </motion.div>
+        </div>
+        <div className="project-display">
+          <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
+          <div className="project-image">
+            <img src={btn[selectedIndex].image_one} alt='Image' />
+          </div>
+          </motion.div>
+
+          <div className='project-use'>
+            
+            <div className='left-port'>
+            <motion.div
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              <div className="inner-port">
+                <img src={btn[selectedIndex].abt_img} alt='Mobile Responsive' />
+              </div>
+              </motion.div>
+            </div>
+
+            <motion.div
+              className="about-intro"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+            <div className="use-case">
+              <h3>{btn[selectedIndex].title}</h3>
+              <p>{btn[selectedIndex].about}</p>
+            </div>
+            </motion.div>
+          </div>
+
+          <div className="project-imp">
+          {/* <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
+            <img src={Rect1} className='imp-back' />
+            </motion.div> */}
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+            <div className="imp">
+            <div className='imp-txt'>
+              <h3>{btn[selectedIndex].feat_one}</h3>
+              <p>{btn[selectedIndex].feat_one_content}</p>
+            </div>
+            <img src={btn[selectedIndex].feat_one_image} className='end-img'/>
+            </div>
+            </motion.div>
+          </div>
+          
+          <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
+          <div className="end-look">
+          {/* <img src={Rect3} alt='Back Image' className='end-back'/> */}
+          <div className='imp-txt'>
+              <h3>{btn[selectedIndex].feat_two}</h3> 
+              <p>{btn[selectedIndex].feat_two_content}</p>
+            </div>
+            <img src={btn[selectedIndex].feat_two_image} className='end-img'/>
+          </div>
+          </motion.div>
+          </div>
+          
+      </div>
+    </>
+  )
+}
