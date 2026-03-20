@@ -3,7 +3,6 @@ import { IoMdDownload } from "react-icons/io";
 
 import { motion } from "framer-motion";
 import Projects from './Projects';
-import Footer from '../components/Footer'
 
 import dp1 from '../assets/dp1.jpg';
 import resume from '../assets/resume.pdf';
@@ -64,7 +63,7 @@ export default function Home() {
 
         <Projects />
       </main>
-      <Footer />
+      
     </>
   )
 }
