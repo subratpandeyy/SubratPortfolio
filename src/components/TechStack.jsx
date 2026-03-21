@@ -1,28 +1,29 @@
-import React from 'react';
-import RGBCard from './RGBCard';
+import React from "react";
+import StackIcon from "tech-stack-icons";
 
 const TechStack = () => {
-  const skills = [
-    'JavaScript', 'React', 'Node.js',
-    'Express.js', 'MongoDB', 'Git', 'GitHub',
-    'Tailwind CSS','Motion', 'MySQL',
-    'Python', 'Flask',
-  ];
-
   return (
-    <RGBCard>
-    <section className="techstack-section">
-      <h2 className="techstack-heading">Technologies I Work With</h2>
-      <div className="skills-grid">
-        {skills.map((skill, index) => (
-          <span className="skill-badge" key={index}>
-            {skill}
-          </span>
-        ))}
+    <section className="tech-section">
+      <div className="tech-icons">
+        <StackIcon name="nextjs2" />
+        <StackIcon name="react" />
+        <StackIcon name="spring" />
+        <StackIcon name="java" />
+        <StackIcon name="javascript" />
+        <StackIcon name="nodejs" />
+        <StackIcon name="express" />
+        <StackIcon name="postgresql" />
+        <StackIcon name="mongodb" />
+        <StackIcon name="tailwindcss" />
+        <StackIcon name="git" />
+        <StackIcon name="vercel" />
+        <StackIcon name="neovim" />
+        <StackIcon name="postman" />
+        <StackIcon name="linux" />
       </div>
     </section>
-    </RGBCard>
   );
 };
 
 export default TechStack;
+

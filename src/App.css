@@ -19,6 +19,13 @@ body {
   max-width: 1200px;
 }
 
+.aligned-text {
+  text-align: justify;
+  white-space: pre-line; 
+  line-height: 1.6;
+  font-size: 18px;
+}
+
 .header nav {
   top: 0;
   position: fixed;
@@ -165,6 +172,34 @@ hr {
 .myphoto img {
   height: 100%;
 }
+
+
+/* techstack-section */
+.tech-section {
+  padding-top: 60px;
+  text-align: center;
+}
+
+.tech-icons {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-icons svg {
+  height: 60px !important;
+  width: 60px !important;
+  transition: transform 0.3s ease;
+}
+
+.tech-icons svg:hover {
+  transform: scale(1.2);
+}
+
+
 /* Loading & error states */
 .loading,
 .error,
@@ -235,7 +270,6 @@ hr {
   margin-bottom: 10px;
 }
 .project-txt p {
-  font-size: 16px;
   line-height: 25px;
   color: #4B5563;
 }
@@ -325,7 +359,6 @@ button.individual-btn {
 }
 
 .use-case p {
-  font-size: 15px;
   line-height: 25px;
   color: #4B5563;
 }
@@ -355,7 +388,6 @@ button.individual-btn {
   font-weight: 500;
 }
 .imp-txt p {
-  font-size: 15px;
   line-height: 25px;
   color: #4B5563;
   text-align: center;
@@ -585,10 +617,8 @@ button.individual-btn {
   .project-use {
     margin: 20px;
   }
-
-  .project-txt p,.use-case p, .imp-txt p {
-    font-size: 14px;
-    line-height: 22px;
+  .aligned-text {
+    font-size: 18px;
   }
 }
 

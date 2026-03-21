@@ -98,13 +98,11 @@ export default function Projects() {
         >
           <div className='project-txt'>
             <h2>My Projects</h2>
-            <p>I like to develop web projects with the MERN stack because it allows me to work on the frontend 
-              and the backend simultaneously in a holistic manner. With React, I concentrate on making interfaces 
-              simple to use, while on the backend I employ Node.js, Express, and MongoDB to manage everything 
-              from data to user actions. </p><p>I've done things such as dashboards, forms, and little tools—each of 
-              them making me better at solving problems and making the web nicer to use for others. 
-              They're a manifestation of how I prefer to learn and create things that are useful and simple.
-              </p>
+            <p className="aligned-text">
+                  {`My focus is on creating web applications that tackle real-life issues by bringing together design and functionality. This is different from creating applications with features, as I strive to create applications with functionality that can simplify tasks, enhance user experience, and create an impact in real-life situations.
+                  Through my experiences with creating data-driven applications, interactive applications, and productivity applications, I have had the opportunity to tackle issues relating to user experience, efficiency, and information accessibility. Each application is a testament to my ability to analyze an issue, create an effective solution, and implement it with functionality and user experience in mind.
+                  My priority is to ensure that I create applications with functionality and an impact, as opposed to applications with features.
+            `}</p>
               </div>
           </motion.div>
           <motion.div
@@ -135,24 +133,27 @@ export default function Projects() {
           </motion.div>
         </div>
         <div className="project-display">
-          <motion.div
+         <motion.div
             initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
           >
+ 
           <div className="project-image">
             <img src={btn[selectedIndex].image_one} alt='Image' />
           </div>
           </motion.div>
 
-          <div className='project-use'>
-            
+          <div className='project-use'> 
             <div className='left-port'>
-            <motion.div
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
+          <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
             >
+ 
               <div className="inner-port">
                 <img src={btn[selectedIndex].abt_img} alt='Mobile Responsive' />
               </div>
@@ -167,20 +168,12 @@ export default function Projects() {
             >
             <div className="use-case">
               <h3>{btn[selectedIndex].title}</h3>
-              <p>{btn[selectedIndex].about}</p>
+              <p className="aligned-text">{btn[selectedIndex].about}</p>
             </div>
             </motion.div>
           </div>
 
           <div className="project-imp">
-          {/* <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-            >
-            <img src={Rect1} className='imp-back' />
-            </motion.div> */}
-
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -189,23 +182,25 @@ export default function Projects() {
             <div className="imp">
             <div className='imp-txt'>
               <h3>{btn[selectedIndex].feat_one}</h3>
-              <p>{btn[selectedIndex].feat_one_content}</p>
+              <p className="aligned-text">{btn[selectedIndex].feat_one_content}</p>
             </div>
             <img src={btn[selectedIndex].feat_one_image} className='end-img'/>
             </div>
             </motion.div>
           </div>
           
-          <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
+        <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
             >
+ 
           <div className="end-look">
           {/* <img src={Rect3} alt='Back Image' className='end-back'/> */}
           <div className='imp-txt'>
               <h3>{btn[selectedIndex].feat_two}</h3> 
-              <p>{btn[selectedIndex].feat_two_content}</p>
+              <p className="aligned-text">{btn[selectedIndex].feat_two_content}</p>
             </div>
             <img src={btn[selectedIndex].feat_two_image} className='end-img'/>
           </div>
