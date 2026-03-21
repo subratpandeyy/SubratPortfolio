@@ -41,7 +41,8 @@ body {
   border-radius: 40px;
   border: 1px solid rgba(69, 69, 71, 0.3);
  /* background: linear-gradient(rgba(69, 69, 71, 0.3), #141b24);*/
-  background-color: #0d1117;
+ /* background-color: #0d1117;*/
+  background-color: #010409;
   box-shadow: 0px 4px 4px 0 #000;
 }
 
@@ -132,7 +133,8 @@ hr {
   display: flex;
   padding: 10px 20px;
   border-radius: 15px;
-  background: linear-gradient(rgba(69, 69, 71, 0.3), #141b24);
+  /*background: linear-gradient(rgba(69, 69, 71, 0.3), #141b24);*/
+  background-color: #010409;
   border: 1px solid rgba(69, 69, 71, 0.3);
   color: #ccc;
   font-weight: 600;
@@ -149,7 +151,7 @@ hr {
   color: #ccc;
   font-family: "Anton", serif;
   letter-spacing: 1.5px;
-  font-size: 40px;
+  font-size: 100px;
   font-weight: 500;
 }
 .sm {
@@ -163,8 +165,8 @@ hr {
   padding-right: 2px;
 }
 .myphoto {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: auto;
   border-radius: 40px;
   border: 1px solid #ccc;
 
@@ -282,7 +284,8 @@ hr {
 }
 button.individual-btn {
   padding: 10px 20px;
-  background: linear-gradient(rgba(69, 69, 71, 0.3), #15161A);
+  /*background: linear-gradient(rgba(69, 69, 71, 0.3), #15161A);*/
+  background-color: #010409;
   border: 1px solid rgba(69, 69, 71, 0.3);
   border-radius: 15px;
   color: #ccc;
@@ -392,7 +395,7 @@ button.individual-btn {
   color: #4B5563;
   text-align: center;
   margin-bottom: 40px;
-  font-weight: 600;
+  
   margin: 0 40px 40px 40px;
 }
 
@@ -554,6 +557,14 @@ button.individual-btn {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+  }
+  .hero h1 {
+    line-height: 1.1;
+  }
+  .sm {
+    justify-content: center;
+    text-align: center;
   }
 }
 
@@ -633,8 +644,7 @@ button.individual-btn {
   .inner-port {
     margin: 30px 0 0 30px;
   }
-  .project-display{
-    margin: 20px;
+  .project-display{ 
     justify-content: center;
     align-items: center;
   }
@@ -656,9 +666,6 @@ button.individual-btn {
   }
   .end-look {
     margin-top: 0px;
-  }
-  .project-use {
-    margin: 20px;
   }
   .aligned-text {
     font-size: 18px;

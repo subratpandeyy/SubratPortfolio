@@ -16,7 +16,6 @@ const TechStack = () => {
         <StackIcon name="mongodb" />
         <StackIcon name="tailwindcss" />
         <StackIcon name="git" />
-        <StackIcon name="vercel" />
         <StackIcon name="neovim" />
         <StackIcon name="postman" />
         <StackIcon name="linux" />
