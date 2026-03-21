@@ -136,7 +136,7 @@ export default function Projects() {
          <motion.div
             initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
  
@@ -150,7 +150,7 @@ export default function Projects() {
           <motion.div
                 initial={{ opacity: 0, x: -10 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
             >
  
@@ -163,8 +163,9 @@ export default function Projects() {
             <motion.div
               className="about-intro"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
             <div className="use-case">
               <h3>{btn[selectedIndex].title}</h3>
@@ -175,9 +176,10 @@ export default function Projects() {
 
           <div className="project-imp">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once:true }}
             >
             <div className="imp">
             <div className='imp-txt'>
@@ -192,7 +194,7 @@ export default function Projects() {
         <motion.div
                 initial={{ opacity: 0, x: -10 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
             >
  
