@@ -199,7 +199,7 @@ export default function Projects() {
             >
  
           <div className="end-look">
-          {/* <img src={Rect3} alt='Back Image' className='end-back'/> */}
+          <img src={Rect3} alt='Back Image' className='end-back'/>
           <div className='imp-txt'>
               <h3>{btn[selectedIndex].feat_two}</h3> 
               <p className="aligned-text">{btn[selectedIndex].feat_two_content}</p>
