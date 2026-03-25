@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Baskervville+SC&family=Bebas+Neue&family=Bitcount+Grid+Double:wght@100..900&family=Cedarville+Cursive&family=Corinthia:wght@400;700&family=Dancing+Script:wght@400..700&family=Fleur+De+Leah&family=League+Spartan:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 @import "tailwindcss";
 
-* {
+/** {
   margin: 0;
   padding: 0;
-}
+}*/
 
 body {
   font-family: "PT Sans", sans-serif;
@@ -29,7 +29,7 @@ body {
 .header nav {
   top: 0;
   position: fixed;
-  margin: 80px 0 0 80px;
+  margin: 80px 0 0 80px; 
   padding-top: 20px;
   padding-bottom: 20px;
   display: grid;
@@ -101,6 +101,19 @@ hr {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+/* Blogs Layout */
+.blog-align {
+  margin: 100px 0 30px 100px;
+}
+.blog-page {
+  margin: 150px 0 30px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.6;
+  color: #ccc;
 }
 
 /* Home */
@@ -263,7 +276,7 @@ hr {
   width: auto;
   transform: scaleX(-1);
 }
-.project-txt h2 {
+.project-txt h2, .blog-align h1, .blog-page h1 {
   font-size: 35px;
   font-weight: 500;
   font-family: "Anton", serif;
@@ -574,6 +587,14 @@ button.individual-btn {
     justify-content: center;
     align-items: center;
   }
+  .blog-align {
+    margin: 30px auto;
+    padding-right:20px;
+    padding-left: 20px;
+  }
+  .blog-page {
+    margin: 150px 0px 50px 0px;
+  }
   .abt-section {
     margin-top: 100px;
   }
@@ -628,7 +649,7 @@ button.individual-btn {
 
   /* project */
   .project-section {
-    margin-top: 100px;
+    margin-top: 50px;
   }
   .abt-row img {
     width: 340px;

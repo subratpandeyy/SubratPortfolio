@@ -2,10 +2,10 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from '../Pages/Home'
 import About from '../Pages/About'
-import Blog from '../Pages/Blog'
+import BlogList from '../components/BlogList.jsx'
 import Projects from '../Pages/Projects'
 import ScrollToTop from '../components/ScrollToTop'
-import BlogPost from '../Pages/BlogPost'
+import BlogPage from '../components/BlogPage.jsx'
 
 export default function Router() {
   return (
@@ -14,8 +14,8 @@ export default function Router() {
             <Routes>
                 <Route path='/' element={<Home />}/>
                 <Route path='/about' element={<About />}/>
-                <Route path='/blog' element={<Blog />}/>
-                <Route path="/blog/:id" element={<BlogPost />} />
+                <Route path='/blogs' element={<BlogList />}/>
+                <Route path="/blog/:slug" element={<BlogPage />} />
                 <Route path='/projects' element={<Projects />}/>
             </Routes>
     </>

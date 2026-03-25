@@ -9,9 +9,9 @@ const TechStack = () => {
         <StackIcon name="react" />
         <StackIcon name="spring" />
         <StackIcon name="java" />
-        <StackIcon name="javascript" />
+        
         <StackIcon name="nodejs" />
-        <StackIcon name="express" />
+        
         <StackIcon name="postgresql" />
         <StackIcon name="mongodb" />
         <StackIcon name="tailwindcss" />
@@ -19,6 +19,7 @@ const TechStack = () => {
         <StackIcon name="neovim" />
         <StackIcon name="postman" />
         <StackIcon name="linux" />
+
       </div>
     </section>
   );
