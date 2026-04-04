@@ -1,15 +1,18 @@
-import React from 'react'
+import { lazy, React, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Home from '../Pages/Home'
-import About from '../Pages/About'
-import Blog from '../Pages/Blog.jsx'
-import Projects from '../Pages/Projects'
-import ScrollToTop from '../components/ScrollToTop'
-import BlogPage from '../components/BlogPage.jsx'
+const Home = lazy(() => import('../Pages/Home'))
+const About = lazy(() => import('../Pages/About'))
+
+
+const Blog = lazy(() => import('../Pages/Blog'))
+const Projects = lazy(() => import('../Pages/Projects'))
+const ScrollToTop = lazy(() => import('../components/ScrollToTop'))
+const BlogPage = lazy(() => import('../components/BlogPage'))
 
 export default function Router() {
   return (
     <>
+    <Suspense falback={<div>Loading...</div>}>
     <ScrollToTop />
             <Routes>
                 <Route path='/' element={<Home />}/>
@@ -18,6 +21,7 @@ export default function Router() {
                 <Route path="/blog/:slug" element={<BlogPage />} />
                 <Route path='/projects' element={<Projects />}/>
             </Routes>
+    </Suspense>
     </>
   )
 }
