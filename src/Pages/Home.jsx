@@ -39,7 +39,7 @@ export default function Home() {
       >
         <div className='abt-txt'>
             <h1>SUBRAT PANDEY</h1>
-            <p className='font-bold text-lg text-blue-400 flex flex-col lg:flex-row items-center gap-x-2'>Web Development Lead at GDG On Campus GIETU<FcGoogle /></p>
+            <p className='font-bold text-lg text-blue-400 p-2 flex flex-col lg:flex-row items-center gap-x-2'>Web Development Lead at GDG On Campus GIETU<FcGoogle /></p>
             <p className='sm'>Full Stack Developer</p>
             <p className='sm'>Jharkhand, India </p>
             <br/>
