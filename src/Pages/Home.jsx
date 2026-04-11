@@ -1,6 +1,8 @@
 import React from 'react'
 import { IoMdDownload } from "react-icons/io";
+import { FcGoogle } from "react-icons/fc";
 
+import TerminalEasterEgg from "../components/TerminalEasterEgg";
 import { motion } from "framer-motion";
 import Projects from './Projects';
 import TechStack from '../components/TechStack';
@@ -37,6 +39,7 @@ export default function Home() {
       >
         <div className='abt-txt'>
             <h1>SUBRAT PANDEY</h1>
+            <p className='font-bold text-lg text-blue-400 flex flex-col lg:flex-row items-center gap-x-2'>Web Development Lead at GDG On Campus GIETU<FcGoogle /></p>
             <p className='sm'>Full Stack Developer</p>
             <p className='sm'>Jharkhand, India </p>
             <br/>
@@ -64,7 +67,11 @@ export default function Home() {
         </div>
 
         <TechStack />
+
+        <div className='flex flex-col lg:flex-row gap-x-2 items-center lg:items-end'>
         <BlogList />
+        <TerminalEasterEgg />
+        </div>
         
 
         <Projects />
