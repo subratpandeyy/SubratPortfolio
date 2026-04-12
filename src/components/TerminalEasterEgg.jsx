@@ -22,24 +22,24 @@ const COMMANDS = {
   skills: {
     output: [
       "INSTALLED PACKAGES:",
-      "  next.js        ████████████  expert",
-      "  react          ████████████  expert",
-      "  node.js        ██████████░░  advanced",
-      "  postgresql     █████████░░░  advanced",
-      "  tailwind       ████████████  expert",
-      "  mongodb        ████████░░░░  proficient",
-      "  git            ██████████░░  advanced",
-      "  linux          ████████░░░░  proficient",
+      "  next.js",
+      "  react",
+      "  node.js",
+      "  postgresql",
+      "  tailwind",
+      "  mongodb",
+      "  git",
+      "  linux",
     ],
   },
   "cat contact.txt": {
     output: [
       "# contact info",
       "",
-      "email    →  subrat@example.com",
-      "github   →  github.com/subratpandey",
-      "linkedin →  linkedin.com/in/subratpandey",
-      "twitter  →  @subratpandey",
+      "email    →  12subratpandey@gmail.com",
+      "github   →  github.com/subratpandeyy",
+      "linkedin →  linkedin.com/in/contact-subrat-pandey",
+      "twitter  →  @12subratpandey",
     ],
   },
   blog: {
@@ -189,6 +189,8 @@ export default function TerminalEasterEgg() {
           position: relative;
         }
 
+       
+
         .term-wrap.glitch {
           animation: glitch 0.4s steps(2);
         }
@@ -232,6 +234,7 @@ export default function TerminalEasterEgg() {
           scrollbar-width: thin;
           scrollbar-color: #30363d transparent;
         }
+       
 
         .term-body::-webkit-scrollbar { width: 4px; }
         .term-body::-webkit-scrollbar-thumb { background: #30363d; border-radius: 4px; }
@@ -357,9 +360,7 @@ export default function TerminalEasterEgg() {
           <div className="scan-line" />
 
           <div className="term-titlebar">
-            <div className="dot dot-red" onClick={() => setIsOpen(false)} title="Close" />
-            <div className="dot dot-yellow" />
-            <div className="dot dot-green" />
+            <div className="dot dot-red" onClick={() => setIsOpen(false)} title="Close" /> 
             <span className="term-title">subrat-os — terminal</span>
           </div>
 
