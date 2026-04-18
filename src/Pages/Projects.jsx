@@ -23,10 +23,25 @@ import crmvert from '../assets/crmvert.png';
 
 import abt_img from '../assets/abt_img.png';
 
-const btn = [ 
+const btn = [
+  {
+    label: 'Cliq',
+    image_one: `https://res.cloudinary.com/dad8dnpev/image/upload/q_auto/f_auto/v1776494054/cliq-1_dk5osl.png`,
+    title: 'Cliq - CLI Based Ai Tool',
+    about: `The CLIQ (Command Line Intelligent Query) project fills this gap by creating a full-stack AI Agent CLI application that lets users talk to an intelligent assistant directly from the terminal. It comes with variety of features for better user interaction and provides a lot of features for development. With an integrated Agentic Ai feature we can develop our own projects with just prompts. It is built using Next.js, Express.js, PostgreSQL, Commander, Chalk and Better-Auth. For verification during login, it generates a unique code everytime a user wants to enter, making it more secure and user oriented.`,
+    abt_img: `https://res.cloudinary.com/dad8dnpev/image/upload/q_auto/f_auto/v1776494311/cliq-2_qttctq.png`,
+
+    feat_one: 'Device Flow Authentication',
+    feat_one_content: `Cliq is integrated with device flow authentication which helps us to create a user login session inside CLI, with the help of Better-Auth and Oauth 2.0. It is secure and allows Github login.`,
+    feat_one_image: `https://res.cloudinary.com/dad8dnpev/image/upload/q_auto/f_auto/v1776494054/Screenshot_20260415_114632_zkrxqb.png`,
+
+    feat_two: "Integrated Ai Agent",
+    feat_two_content: `Cliq provides real-time Ai features in CLI with the help of Gemini Api. It enhances the overall performance and functionality of the tool with multiple Ai features integrated into it like chat, search mode, agentic mode, etc.`,
+    feat_two_image: `https://res.cloudinary.com/dad8dnpev/image/upload/q_auto/f_auto/v1776494055/Screenshot_20260415_115013_kn1jam.png`
+  },
   {
     label: 'CRM Platform',
-    image_one: crm1,
+ image_one: crm1,
     title: 'CRM Platform – Smart Customer & Business Management',
     about: 'I built this CRM Platform to simplify how businesses manage customers, leads, and daily operations. Designed using React.js, Spring Boot, PostgreSQL, and Hibernate, this system delivers seamless performance with a secure and scalable architecture. It handles real-time customer tracking, lead management, deal pipelines, role-based access, and powerful automation. The goal was to create a professional-grade CRM that feels lightweight, fast, and reliable for small organizations and growing teams. Every feature is crafted to make business management smoother, smarter, and more efficient.',
     abt_img: crmvert,
